@@ -1,0 +1,9 @@
+
+#Ignore everything
+*
+
+#but not this
+!*/
+!*.md
+!.gitignore
+!.lua
