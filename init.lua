@@ -8,5 +8,6 @@ require("vadym.telescope")
 require("vadym.treesitter")
 require("vadym.autopairs")
 require("vadym.lualine")
+require("vadym.bufferline")
 --require('vadym.autosave')
 

@@ -79,10 +79,17 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"
 
 
-    --statusline
+    -- statusline
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    -- bufferline
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons'
     }
 
     if PACKER_BOOTSTRAP then
