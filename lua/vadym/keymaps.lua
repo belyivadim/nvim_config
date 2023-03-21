@@ -15,6 +15,13 @@ vim.g.maplocalleader = " "
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- refactor
+keymap("n", "<leader>rn", ":lua RenameSymbol()<CR>", opts)
+-- helper function for receiving new_name
+function RenameSymbol()
+  vim.lsp.buf.rename(vim.fn.input('New name: '))
+end
+
 -- Window Nav
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -30,8 +37,8 @@ keymap("n", "<leader>tv", ":vnew | term<CR>:set nonu<CR>a", opts)
 keymap("n", "<leader>th", ":new | term<CR>:set nonu<CR>a", opts)
 keymap("t", "<ESC>", "<C-\\><C-n>:bd! %<CR>", term_opts)
 
-keymap("t", "<F7>", buffers.TerminalToggle(), term_opts) -- term toggle
-keymap("n", "<F7>", buffers.TerminalToggle(), term_opts) -- term toggle
+--keymap("t", "<F7>", buffers.TerminalToggle(), term_opts) -- term toggle
+--keymap("n", "<F7>", buffers.TerminalToggle(), term_opts) -- term toggle
 
 --keymap("t", "tv", "<C-\\><C-n>:vnew | term<CR>a", term_opts)
 --keymap("t", "th", "<C-\\><C-n>:new | term<CR>a", term_opts)

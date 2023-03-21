@@ -9,5 +9,6 @@ require("vadym.treesitter")
 require("vadym.autopairs")
 require("vadym.lualine")
 require("vadym.bufferline")
+require("vadym.snippets")
 --require('vadym.autosave')
 
